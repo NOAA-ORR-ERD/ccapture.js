@@ -639,14 +639,14 @@ function CCapture( settings ) {
 		}
 	}
 
-	var _oldSetTimeout = window.setTimeout,
+	/*var _oldSetTimeout = window.setTimeout,
 		_oldSetInterval = window.setInterval,
-	    	_oldClearInterval = window.clearInterval,
+		_oldClearInterval = window.clearInterval,
 		_oldClearTimeout = window.clearTimeout,
 		_oldRequestAnimationFrame = window.requestAnimationFrame,
 		_oldNow = window.Date.now,
 		_oldPerformanceNow = window.performance.now,
-		_oldGetTime = window.Date.prototype.getTime;
+		_oldGetTime = window.Date.prototype.getTime;*/
 	// Date.prototype._oldGetTime = Date.prototype.getTime;
 	
 	var media = [];
@@ -660,7 +660,7 @@ function CCapture( settings ) {
 		_performanceStartTime = window.performance.now();
 		_performanceTime = _performanceStartTime + _settings.startTime;
 
-		window.Date.prototype.getTime = function(){
+		/*window.Date.prototype.getTime = function(){
 			return _time;
 		};
 		window.Date.now = function() {
@@ -722,7 +722,7 @@ function CCapture( settings ) {
 			Object.defineProperty( HTMLAudioElement.prototype, 'currentTime', { get: hookCurrentTime } )
 		} catch (err) {
 			_log(err);
-		}
+		}*/
 
 	}
 	
@@ -749,14 +749,14 @@ function CCapture( settings ) {
 	
 	function _destroy() {
 		_log( 'Capturer stop' );
-		window.setTimeout = _oldSetTimeout;
+		/*window.setTimeout = _oldSetTimeout;
 		window.setInterval = _oldSetInterval;
 		window.clearInterval = _oldClearInterval;
 		window.clearTimeout = _oldClearTimeout;
 		window.requestAnimationFrame = _oldRequestAnimationFrame;
 		window.Date.prototype.getTime = _oldGetTime;
 		window.Date.now = _oldNow;
-		window.performance.now = _oldPerformanceNow;
+		window.performance.now = _oldPerformanceNow;*/
 	}
 
 	function _updateTime() {
