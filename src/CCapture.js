@@ -639,14 +639,14 @@ function CCapture( settings ) {
 		}
 	}
 
-	/*var _oldSetTimeout = window.setTimeout,
+	var _oldSetTimeout = window.setTimeout,
 		_oldSetInterval = window.setInterval,
 		_oldClearInterval = window.clearInterval,
 		_oldClearTimeout = window.clearTimeout,
 		_oldRequestAnimationFrame = window.requestAnimationFrame,
 		_oldNow = window.Date.now,
 		_oldPerformanceNow = window.performance.now,
-		_oldGetTime = window.Date.prototype.getTime;*/
+		_oldGetTime = window.Date.prototype.getTime;
 	// Date.prototype._oldGetTime = Date.prototype.getTime;
 	
 	var media = [];
